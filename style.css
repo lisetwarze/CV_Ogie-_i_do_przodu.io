@@ -93,3 +93,10 @@ body {
     text-align: center;
     clear: both;
 }
+.timerc
+{
+    font-size: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
