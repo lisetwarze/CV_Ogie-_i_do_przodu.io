@@ -302,8 +302,44 @@ currentIndex = (currentIndex + 1) % colors.length: Aktualizuje indeks do następ
 
 setTimeout(changeBackgroundColor, delay): Ustawia opóźnienie do następnej zmiany koloru, które wynosi 500 ms dla pierwszej zmiany i 3000 ms dla kolejnych. 
 
- 
+1.3 Adam Dźwigała 157695
+W swojej pracy wykonałem funkcję, polegającą na zmianie zdjęcia profilowego w pętli, w określonym czasie.
 
+Szczegóły techniczne: 
+Wykorzysłem trzy obrazy:
+adam.jpg
+grzegorz.jpg
+krzysztof.jpg
+
+
+Opis funkcji:  
+Funcja jest umieszcznona wewnątrz index.html. W kodzie umieszczone zostały trzy obrazy, reprezentujące każdego z nas. Ów zdjęcia dynamicznie zmieniają się w pętli.
+
+Kod funkcji: 
+
+var i = 0;
+		var images = [];
+		var time = 3000;
+		
+		images[0] = 'adam.jpg';
+		images[1] = 'grzegorz.jpg';
+		images[2] = 'krzysztof.jpg';
+		
+		function changeImg(){
+			document.slide.src = images[i];
+			
+			if(i < images.length - 1){
+				i++;
+			} else {
+				i = 0;
+			}
+			
+			setTimeout("changeImg()", time);
+		}
+		
+		window.onload = changeImg
+Jak działa:
+Jak już wcześniej wspomniałem, działanie polega na senwencyjnym "pokazie slajdów" z użyciem załączonych zdjęć.
  
 
  
