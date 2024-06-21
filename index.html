@@ -9,7 +9,33 @@
 <body>
   <div class="container">
     <div class="column left-column">
-      <img class="photo" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile photo">
+    <script>
+		var i = 0;
+		var images = [];
+		var time = 3000;
+		
+		images[0] = 'adam.jpg';
+		images[1] = 'grzegorz.jpg';
+		images[2] = 'krzysztof.jpg';
+		
+		function changeImg(){
+			document.slide.src = images[i];
+			
+			if(i < images.length - 1){
+				i++;
+			} else {
+				i = 0;
+			}
+			
+			setTimeout("changeImg()", time);
+		}
+		
+		window.onload = changeImg
+	</script>	
+	<img name="slide" id="image" width="488">
+		
+	
+	
       <div class="basic-info">
         <h1 class="name">Imię Nazwisko</h1>
         <h3><i class="bi bi-briefcase-fill"></i>Desinger</h3>

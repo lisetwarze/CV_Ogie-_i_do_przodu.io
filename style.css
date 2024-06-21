@@ -22,6 +22,7 @@ body {
     border-radius: 16px;
     overflow: hidden;
     padding-bottom: 16px;
+	
 }
 
 .basic-info {
@@ -45,8 +46,10 @@ body {
     border: 1px solid lightgray;
 }
 
-.photo {
+.img {
     width: 100%;
+	display: block;
+	transition: 0.3s;
 }
 
 .name {
